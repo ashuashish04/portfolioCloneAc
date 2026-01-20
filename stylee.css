@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+.bnnner{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #fff;
+    padding: 100px;
+    transition: .5s;
+}
+#text {
+    display: inline-block;
+    /* Adjust based on longest word */
+    white-space: nowrap;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px 100px ;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    color: #333;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    transition: .5s;
+}
+header .logo span{
+    color: red;
+    font-size: 2em;
+}
+header ul {
+    display: flex;
+    gap: 40px;
+}
+header ul li{
+    list-style-type: none;
+}
+header ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #333;
+    transform: .5s;
+}
+.content{
+    position: relative;
+    max-height: 700px;
+}
+.content h2{
+    color: #333;
+    font-size: 5.5em;
+    transition: .5s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.content h2 span{
+    color: orangered;
+}
+.content p{
+    color: #666;
+    margin: 10px 0;
+    transition: .5s;
+    font-size: 1.2em;
+}
+button{
+    padding: 10px 27px;
+    margin: 10px 0px ;
+    margin-left: 6px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(78, 107, 107);
+    color: white;
+    font-size: 1.02em;
+    transition: .5s;
+    cursor: pointer;
+}
+button:active{
+    scale: 0.87;
+}
+.chat{
+    background: transparent;
+    color: #333;
+}
+.daynight{
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #bebcbc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.6em;
+    transform: translateX(-20%);
+    z-index: 1000;
+}
+.bnnner.night{
+    background-color: #333;
+}
+.daynight .fa-solid:nth-child(1),.bnnner.night .daynight .fa-solid:nth-child(2){
+    display: none;
+}
+.bnnner.night .daynight .fa-solid:nth-child(2){
+    display: block;
+}
+.bnnner.night .daynight{
+    color: #fff;
+    background: #444;
+}
+.bnnner.night header .logo,
+.bnnner.night .content p,
+.bnnner.night .content h2,
+.bnnner.night .content .chat,
+.bnnner.night header ul li a{
+    color: #fff;
+}
